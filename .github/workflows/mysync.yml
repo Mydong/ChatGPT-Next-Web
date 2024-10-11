@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: tgymnich/fork-sync@v2.0.10
+      - uses: AbdulmelikKalkan/sync-fork-upstream@v1.3
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
           owner: Mydong
-          base: main
-          head: main
+          repo: ChatGPT-Next-Web
+          branch: main
