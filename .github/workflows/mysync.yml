@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: AbdulmelikKalkan/sync-fork-upstream@v1.3
+      - uses: tgymnich/fork-sync@latest
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
