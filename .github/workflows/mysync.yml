@@ -16,5 +16,5 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
           owner: Mydong
-          repo: ChatGPT-Next-Web
-          branch: main
+          base: main
+          head: main
