@@ -1,6 +1,3 @@
-
-name: Sync Fork
-
 on:
   schedule:
     - cron: '*/30 * * * *' # every 30 minutes
@@ -14,7 +11,7 @@ jobs:
     steps:
       - uses: zwping/fork-sync@v1.6.5
         with:
-          token: ${{ ACCESS_TOKEN }}
+          token: ${{ secrets.PERSONAL_TOKEN }}
           owner: ChatGPTNextWeb
           base: main
           head: main
