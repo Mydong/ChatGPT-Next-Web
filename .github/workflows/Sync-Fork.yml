@@ -20,7 +20,7 @@ jobs:
       - name: Sync Fork
         uses: zwping/fork-sync@v1.6.5
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ ACCESS_TOKEN }}
           owner: ChatGPTNextWeb
           base: main
           head: main
