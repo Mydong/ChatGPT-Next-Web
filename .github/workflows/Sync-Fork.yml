@@ -1,0 +1,26 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # 每天同步一次
+  workflow_dispatch: # 手动触发
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          repository: Mydong/ChatGPT-Next-Web
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          path: myrepo
+
+      - name: Sync Fork
+        uses: zwping/fork-sync@v1.6.5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          owner: ChatGPTNextWeb
+          base: main
+          head: main
